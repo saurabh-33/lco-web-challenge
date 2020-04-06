@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/lco-web-challenge/static/css/main.bed12179.chunk.css",
+    "main.js": "/lco-web-challenge/static/js/main.4d1beb3f.chunk.js",
+    "main.js.map": "/lco-web-challenge/static/js/main.4d1beb3f.chunk.js.map",
+    "runtime-main.js": "/lco-web-challenge/static/js/runtime-main.5927f8d0.js",
+    "runtime-main.js.map": "/lco-web-challenge/static/js/runtime-main.5927f8d0.js.map",
+    "static/js/2.2295e3bc.chunk.js": "/lco-web-challenge/static/js/2.2295e3bc.chunk.js",
+    "static/js/2.2295e3bc.chunk.js.map": "/lco-web-challenge/static/js/2.2295e3bc.chunk.js.map",
+    "index.html": "/lco-web-challenge/index.html",
+    "precache-manifest.df982fcf8af898ecfcee457879ae02e4.js": "/lco-web-challenge/precache-manifest.df982fcf8af898ecfcee457879ae02e4.js",
+    "service-worker.js": "/lco-web-challenge/service-worker.js",
+    "static/css/main.bed12179.chunk.css.map": "/lco-web-challenge/static/css/main.bed12179.chunk.css.map",
+    "static/js/2.2295e3bc.chunk.js.LICENSE.txt": "/lco-web-challenge/static/js/2.2295e3bc.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/lco-web-challenge/static/media/MerriweatherSans-BoldItalic.fce6d8e1.ttf",
+    "static/media/about-background-mobile-768X1024.png": "/lco-web-challenge/static/media/about-background-mobile-768X1024.573dceae.png",
+    "static/media/Home.css": "/lco-web-challenge/static/media/home-background-mobile-375X736.ee6da23f.png",
+    "static/media/sports-logo-transparent-250X250.png": "/lco-web-challenge/static/media/sports-logo-transparent-250X250.c1ecff4f.png",
+    "static/media/tournament-background-600X450.png": "/lco-web-challenge/static/media/tournament-background-600X450.52d262b8.png",
+    "static/media/Video.css": "/lco-web-challenge/static/media/video-background-mobile-375X812.8bc6bad8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5927f8d0.js",
+    "static/js/2.2295e3bc.chunk.js",
+    "static/css/main.bed12179.chunk.css",
+    "static/js/main.4d1beb3f.chunk.js"
+  ]
+}
