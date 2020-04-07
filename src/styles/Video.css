@@ -1,0 +1,75 @@
+.Video {
+	background-color: #6cb7b9;
+	background-image: url("../assets/video-background-mobile-375X812.jpg");
+	background-size: cover;
+}
+.Video .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 95%;
+	max-width: 500px;
+	height: calc(100% - var(--appbar-height-mobile));
+	left: 0;
+	right: 0;
+	/* top: 0; */
+	bottom: 0;
+	margin: auto;
+}
+.Video .content header {
+	display: inline-block;
+	align-self: flex-start;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 20px;
+}
+.Video .content header h2 {
+	border-bottom: 2px solid salmon;
+	font-family: "Kanit", sans-serif;
+	color: #fff;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.Video .content section {
+	position: relative;
+	width: 100%;
+	padding-top: 56.25%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.Video .content section iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	min-width: 288px;
+	height: 80%;
+	min-height: 163px;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+@media (min-width: 800px) {
+	.Video {
+		background-image: url("../assets/video-background-desktop-1440X953.jpg");
+	}
+	.Video .content {
+		height: calc(95% - var(--appbar-height-desktop));
+	}
+}
+
+/*animations for video*/
+.Video .video-animate {
+	animation: videoAnimate 2s 1 forwards;
+	animation-delay: 0.3s;
+}
+@keyframes videoAnimate {
+	from {
+		transform: rotateY(90deg);
+	}
+	to {
+		transform: rotateY(0deg);
+	}
+}

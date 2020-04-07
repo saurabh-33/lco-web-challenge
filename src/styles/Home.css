@@ -1,0 +1,166 @@
+.Home {
+	background-color: rgb(175, 217, 231);
+	background-image: url("../assets/line-texture-20X20.png");
+	scroll-behavior: smooth;
+}
+.Home .content {
+	left: 0;
+	/* background-color: lightcoral; */
+}
+.Home .content > header {
+	display: none;
+}
+.Home .content .jumbotron {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: calc(100vh - var(--appbar-height-mobile));
+	background-color: transparent;
+	background-image: url("../assets/home-background-mobile-375X736.png");
+	background-size: cover;
+	opacity: 0;
+	animation-delay: 0.4s;
+}
+.Home .content .jumbotron .jumbotron-content {
+	background-color: rgb(55, 16, 78);
+	/* background-color: rgba(55, 16, 78, 0.75); */
+	padding: 20px;
+	color: #fff;
+	box-shadow: 0 0 10px 0 rgb(55, 16, 78);
+	opacity: 0;
+	animation-delay: 1.2s;
+}
+.Home .content .jumbotron .jumbotron-content blockquote {
+	padding: 25px 0 25px 0;
+	font-family: "Merriweather Sans", "Gotu", sans-serif;
+	font-size: 1.375em;
+	font-style: italic;
+	font-weight: bold;
+}
+.Home .content .jumbotron .jumbotron-content .action-btn-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.Home .content .jumbotron .jumbotron-content .action-btn-container .login-btn,
+.Home
+	.content
+	.jumbotron
+	.jumbotron-content
+	.action-btn-container
+	.sign-up-btn {
+	outline: none;
+	display: inline-block;
+	padding: 5px;
+	border: 2px solid #fff;
+	color: #fff;
+	background-color: transparent;
+	font-family: "Kanit", sans-serif;
+	font-size: 1.125em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	cursor: pointer;
+	transition: color 0.2s, border-color 0.2s;
+}
+.Home
+	.content
+	.jumbotron
+	.jumbotron-content
+	.action-btn-container
+	.login-btn:hover {
+	color: rgb(104, 255, 104);
+	border-color: rgb(104, 255, 104);
+}
+.Home
+	.content
+	.jumbotron
+	.jumbotron-content
+	.action-btn-container
+	.sign-up-btn:hover {
+	color: rgb(255, 240, 104);
+	border-color: rgb(255, 240, 104);
+}
+
+.Home
+	.content
+	.jumbotron
+	.jumbotron-content
+	.action-btn-container
+	.login-btn:focus {
+	color: rgb(0, 0, 0);
+	background-color: rgb(104, 255, 104);
+	border-color: rgb(104, 255, 104);
+}
+.Home
+	.content
+	.jumbotron
+	.jumbotron-content
+	.action-btn-container
+	.sign-up-btn:focus {
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 240, 104);
+	border-color: rgb(255, 240, 104);
+}
+.Home .content .jumbotron .jumbotron-link {
+	background-color: rgb(55, 16, 78);
+	padding: 10px;
+	margin: 10px 0;
+	opacity: 0;
+	animation-delay: 2s;
+}
+.Home .content .jumbotron .jumbotron-link > a {
+	text-decoration: none;
+	font-family: "Kanit", sans-serif;
+	font-size: 0.875em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #fff;
+}
+.Home .content .jumbotron .jumbotron-link a svg {
+	margin-right: 10px;
+}
+.Home .content #who_are_we {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding-top: var(--appbar-height-mobile);
+	width: 100%;
+	height: 100vh;
+	background-color: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, 0.6);
+	margin: 0 auto;
+	border-top: 2px solid rgb(16, 43, 78);
+}
+.Home .content #who_are_we header {
+	width: 95%;
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+.Home .content #who_are_we header h3 {
+	display: inline-block;
+	font-family: "Kanit", sans-serif;
+	padding: 10px;
+}
+.Home .content #who_are_we header h3 strong {
+	border-bottom: 2px solid salmon;
+	text-transform: uppercase;
+}
+.Home .content #who_are_we section {
+	font-family: "Gotu", sans-serif;
+	width: 95%;
+	max-width: 500px;
+	margin: 0 auto;
+}
+@media (min-width: 800px) {
+	.Home .content .jumbotron {
+		background-image: url("../assets/home-background-desktop-1366X648.png");
+		height: calc(100vh - var(--appbar-height-desktop));
+	}
+	.Home .content #who_are_we {
+		padding-top: var(--appbar-height-desktop);
+	}
+}

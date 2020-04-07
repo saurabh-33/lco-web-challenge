@@ -1,0 +1,52 @@
+.Tournament {
+	background-image: url("../assets/line-texture-20X20.png");
+}
+.Tournament .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: calc(100vh - var(--appbar-height-mobile));
+	font-family: "Kanit", sans-serif;
+	max-width: 500px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	opacity: 0;
+}
+.Tournament .content header {
+	width: 95%;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.75);
+	padding: 20px 0 20px 0;
+}
+.Tournament .content header h2 {
+	display: inline-block;
+	border-bottom: 2px solid salmon;
+	color: #fff;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.Tournament .content .tournament-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 95%;
+	height: auto;
+}
+.Tournament .content .tournament-container img {
+	width: 100%;
+}
+.Tournament .content .tournament-container h3 {
+	display: inline-block;
+	position: absolute;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.75);
+	text-transform: uppercase;
+}
+@media (min-width: 800px) {
+	.Tournament .content {
+		height: calc(100vh - var(--appbar-height-desktop));
+	}
+}

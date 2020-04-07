@@ -1,0 +1,191 @@
+.login-modal-container {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 11;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000; /*fallback color*/
+	background-color: rgba(0, 0, 0, 0.7);
+	overflow: auto;
+}
+.login-modal-container.active {
+	display: flex;
+}
+.login-modal {
+	display: inline-block;
+	width: 40%;
+	min-width: 250px;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 0 15px 0 rgb(0, 0, 0);
+	font-family: "Kanit", sans-serif;
+}
+
+.login-modal > * {
+	display: block;
+	max-width: 100%;
+	padding: 15px;
+	overflow: auto;
+	letter-spacing: 2px;
+}
+.login-modal header {
+	text-transform: uppercase;
+	color: #000;
+	background-color: rgb(104, 255, 104);
+	border-radius: 10px 10px 0 0;
+	font-size: 26px;
+	user-select: none;
+}
+.login-modal header .login-modal-close {
+	float: right;
+	cursor: pointer;
+}
+.login-modal header .login-modal-close:hover {
+	color: red;
+}
+.login-modal article {
+	max-height: 225px;
+	height: auto;
+	min-height: 112px;
+	box-shadow: inset 0 0 10px 0 #000;
+	background-color: grey;
+	background-image: radial-gradient(rgb(212, 212, 212), transparent);
+}
+.login-modal article form {
+	min-width: 220px;
+	width: 100%;
+	max-width: 300px;
+	margin: 0 auto;
+}
+.login-modal article form label {
+	display: block;
+	width: 100%;
+	padding: 10px 0 10px 0;
+	font-size: 18px;
+	/* background-color: rgb(255, 192, 192); */
+}
+.login-modal article form label .label-text {
+	display: block;
+}
+.login-modal article form label .input-container {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 35px;
+}
+.login-modal article form label .input-container svg {
+	display: inline-block;
+	position: relative;
+	font-size: 16px;
+	z-index: 1;
+}
+.login-modal article form label .input-container svg.password-visibility-icon {
+	cursor: pointer;
+}
+.login-modal
+	article
+	form
+	label
+	.input-container
+	svg.password-visibility-icon.active {
+	color: rgb(0, 45, 149);
+}
+.login-modal article form label .input-container input {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+	padding: 0 25px 0 25px;
+	border: none;
+	border-bottom: 2px solid black;
+	font-size: 16px;
+	letter-spacing: 1px;
+	transition: border-bottom-color 0.3s;
+}
+
+.login-modal footer {
+	/* padding: 0; */
+	border-radius: 0 0 10px 10px;
+	text-align: center;
+	background-color: rgb(104, 255, 104);
+}
+.login-modal footer button {
+	display: inline-block;
+	text-align: center;
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+	background-color: #673ab7;
+	color: #fff;
+	font-family: "Kanit";
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	user-select: none;
+	box-shadow: 0 0 5px 0 #000;
+	transform: scale(1);
+	transition: box-shadow 0.1s, transform 0.1s;
+}
+.login-modal footer button:hover {
+	cursor: pointer;
+}
+
+/*transitions and animations for login modal */
+
+/*transitions*/
+.login-modal footer button:focus {
+	transform: scale(1.1);
+	box-shadow: 0 0 10px 0 #000;
+}
+.login-modal article form label input:focus {
+	border-bottom-color: blue;
+}
+
+/*animations*/
+.login-modal.active {
+	animation-name: viewLoginModal;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+@keyframes viewLoginModal {
+	0% {
+		transform: scale(0);
+	}
+	30% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.login-modal.active.hide-animation {
+	animation-name: hideLoginModal;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+@keyframes hideLoginModal {
+	0% {
+		transform: scale(1);
+	}
+	70% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
